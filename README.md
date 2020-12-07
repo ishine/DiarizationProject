@@ -4,9 +4,9 @@ This repository is a copy of the repository (under SAIL-USC) that was made for t
 
 The scripts recall.py, filter.py, select.py and split_map.sh are my contributions to the project of which **recall.py** is particularly important as it validates the success of the experimentation. 
 
-The file pv_prepareMyST.sh is a file that very closely follows the file https://github.com/kaldi-asr/kaldi/blob/master/egs/voxceleb/v2/run.sh but has been modified by me for creating the directories (with and without pitch variations). My contributions have been represented in the code.
+The file **pv_prepareMyST.sh** is an important file that very closely follows the file https://github.com/kaldi-asr/kaldi/blob/master/egs/voxceleb/v2/run.sh but has been modified by me for creating the data directories (with and without pitch variations). My contributions can be found in the block of code between "Beginning of my code contributions" and "End of my code contributions".
 
-The evaluation script diarize_kaldi.sh was written by the PhD student I collaborated with. My contributions to this script are minor and have been represented in the code.
+The evaluation script diarize_kaldi.sh was written by the PhD student I collaborated with. My contributions to this script are minor and have been represented in the code in a format similar to the one above.
 
 # PROJECT DETAILS
 
