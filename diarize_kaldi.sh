@@ -127,11 +127,6 @@ if [ "$method" == "plda" ]; then
                $expDir/plda/scoring \
                $expDir/plda/clustering_oracleNumSpkr
 
-#  diarization/cluster.sh --nj $nj \
- #             --cmd "$train_cmd --mem 5G" \
-  #            --threshold 0 \
-  #            $expDir/plda/scoring \
-  #            $expDir/plda/clustering_estNumSpkr
 
 else
 
