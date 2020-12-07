@@ -8,7 +8,7 @@ cd /X/MyST_material
 mkdir pvDir
 
 #Introducing Pitch Variations between 0.9 to 1.1 times the orginal frequency
-PV=1
+PV=1  #carries out normal data preparation if PV=0
 cent_low=-182
 cent_high=174
 upper_limit=( $cent_high - $cent_low + 1 )
