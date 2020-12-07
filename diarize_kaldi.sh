@@ -1,23 +1,8 @@
 #!/bin/bash
 
-: ' Date Created: Mar 27 2020
-    Perform speaker diarization using kaldi xvectors
-
-    All numbers in %meanDER: (oracle #spkr, estimated #spkr)
-
-    =====================================================================
-    kaldi_xvectors             SC                   PLDA
-    =====================================================================
-    AMI-eval:                  ( 5.6983,  6.7433)   (10.8792,  9.5083)
-    DIHARD2-dev:               (27.0015, 24.4982)   (24.9390, 33.3898)
-    DIHARD2-dev-subset (demo): (19.6259, 14.3429)   (16.6159, 21.2845)
-    =====================================================================
-
-
-'
 
 currDir=$PWD
-kaldiDir=/home/coder/kaldi
+kaldiDir=/X/kaldi
 expDir=$currDir/exp_kaldi
 wavDir=$currDir/wav
 rttmDir=$currDir/rttm
@@ -28,7 +13,7 @@ readlink -f $wavDir/* > $wavList
 window=1.5
 window_period=0.75
 min_segment=0.5
-nnetDir=/home/coder/suchitra/MyST_material/dataprep/nnet/model_d
+nnetDir=/X/MyST_material/dataprep/nnet/model_d
 #nnetDir=/home/coder/suchitra/0007_voxceleb_v2_1a/exp/xvector_nnet_1a
 transformDir=$nnetDir/xvectors_train/
 
@@ -46,7 +31,7 @@ if [[ "$method" == "SC" ]] && [[ ! -d Auto-Tuning-Spectral-Clustering ]]; then
 fi
 
 for f in sid steps utils local conf diarization; do
-  [ ! -L $f ] && ln -s /home/coder/suchitra/MyST_material/dataprep/$f;
+  [ ! -L $f ] && ln -s /X/MyST_material/dataprep/$f;
 done
 #exit 0
 if [[ "$useCollar" == "1" ]]; then
@@ -173,32 +158,30 @@ cd ..
 
 fi
 
+# Beginning of my code contributions
+
 # Evaluation
 
 sed -i "s/-rec//g" $expDir/$method/clustering_oracleNumSpkr/rttm
 
 cd dscore/
-oracleResults=`python score.py $collarCmd -u /home/coder/suchitra/DIHARD/all.uem -R <(ls $rttmDir/*) \
+oracleResults=`python score.py $collarCmd -u /X/DIHARD/all.uem -R <(ls $rttmDir/*) \
   -S <(ls $expDir/$method/clustering_oracleNumSpkr/rttm) |\
   grep OVERALL | tr -s ' ' | cut -f 4-5 -d ' '`
 
-python score.py $collarCmd -u /home/coder/suchitra/DIHARD/all.uem -R <(ls $rttmDir/*) \
+python score.py $collarCmd -u /X/DIHARD/all.uem -R <(ls $rttmDir/*) \
   -S <(ls $expDir/$method/clustering_oracleNumSpkr/rttm) > $currDir/temp
 
-#awk -F ' ' '{print $2}' $currDir/temp > $currDir/newtemp
-#awk -F ' ' '{print $3}' $currDir/temp > $currDir/newtemp_JER
+
 
 meanDER=`awk -F ' ' '{sum+=$2;} END{print sum/(NR-3)}' $currDir/temp`
 stdDER=`awk -v var=$meanDER '{ssq+=($2 - var)^2} END { print sqrt(ssq / (NR-3)); }' $currDir/temp`
-echo $meanDER
-meanJER=`awk -F ' ' '{sum+=$3;} END{print sum/(NR-3)}' $currDir/temp`
-stdJER=`awk -v var=$meanJER '{ssq+=($3 - var)^2} END { print sqrt(ssq / (NR-3)); }' $currDir/temp`
-echo $meanJER
+echo $meanDER 
 cd ..
 
 echo "Mean DER with Oracle #Spkrs: `echo $oracleResults | cut -f 1 -d ' '`"
 echo "STD DER with Oracle #Spkrs: `echo $stdDER`"
 
-echo "Mean JER with Oracle Speakers: `echo $oracleResults | cut -f 2 -d ' '`"
-echo "STD JER with Oracle Speakers: `echo $stdJER`"
+
+# End of my code contributions
 rm $wavList
