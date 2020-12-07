@@ -120,7 +120,7 @@ Pitch Variation| 0.919| 0.842|
 
 ## Age Experiments
 
-For the adosMod3 corpus, children have been classified into 3 categories based on their ages. **filter.py** was the program used to segregate the wave files based on the ages. This script checks to see which of the files listed in ageGenderIQ.sh (contains file name, age, gender and verbal quotient information) are actually present in the corpus. The minimum and maximum age values were found and 3 categories for ages were determined such that each category would have similar number of .wav files. Each of these groups have been used as separate corpora to evaluate the 4 existing models as well as the pretrained model. The Age groups, in months, are as follows:
+For the adosMod3 corpus, children have been classified into 3 categories based on their ages. **filter.py** was the program used to segregate the wave files based on the ages. This script checks to see which of the files listed in ageGenderIQ.sh (contains file name, age, gender and verbal quotient information) are actually present in the corpus. The minimum and maximum age values were found and 3 categories for ages were determined such that each category would have similar number of .wav files. Each of these groups have been used as separate corpora to evaluate the Pitch Variation model as well as the Pretrained model. The Age groups, in months, are as follows:
 
 Age Group1 : 43 - 92
 
@@ -139,7 +139,7 @@ The relative improvement in the PLDA DER scores are 39.85%, 38.56% and 31.41%, r
 
 Again, the adosMod3 corpus has been classified into 2 categories, male and female. The same python script, filter.py was used for the same. The male speakers were annotated by the value 1 and the female speakers were annotated by the value 2 in the ageGenderIQ.sh file.
 
-The models pretrained, a, b, c, d and the pitch variation model were used for evaluating the datasets. The results are tabulated below:
+The models Pretrained and Pitch Variation model were used for evaluating the datasets. The results are tabulated below:
 
 Model | Female PLDA | Female SC | Male PLDA | Male SC |
 -----|-----|-----|-----|-----|
