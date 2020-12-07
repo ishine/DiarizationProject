@@ -2,7 +2,7 @@
 
 This repository is a copy of the repository (under SAIL-USC) that was made for the SLT 2021 paper submission. 'X' in the path names, both in the README and in the code, is a place holder for the actual path names in order to maintain the privacy of the organization.
 
-The scripts recall.py, filter.py, select.py and split_map.sh are my contributions to the project of which **recall.py** is particularly important as it validates the success of the experimentation. 
+The scripts **recall.py, filter.py, select.py and split_map.sh** are my contributions to the project of which **recall.py** is particularly important as it validates the success of the experimentation. 
 
 The file **pv_prepareMyST.sh** is an important file that very closely follows the file https://github.com/kaldi-asr/kaldi/blob/master/egs/voxceleb/v2/run.sh but has been modified by me for creating the data directories (with and without pitch variations). My contributions can be found in the block of code between "Beginning of my code contributions" and "End of my code contributions".
 
