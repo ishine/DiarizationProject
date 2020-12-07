@@ -33,13 +33,11 @@ The loaction variables should be set accordingly.
 
 Kaldi expects the utterance id to be prefixed with speaker id and hence certain modifications need to be made when increasing replications (as a part of augmentation) as a prefix is added to the utterance ids to annotate the replication.
 
-The MyST data directory is at /home/coder/suchitra/MyST_material/myst
+The MyST data directory is at /X/MyST_material/myst
 
-mfcc and vad feature directoreis are /home/coder/suchitra/MyST_material/dataprep/mfcc and /home/coder/suchitra/MyST_material/dataprep/vad respectively
+mfcc and vad feature directoreis are /X/MyST_material/dataprep/mfcc and /X/MyST_material/dataprep/vad respectively
 
-The 4 model files can be found at /home/coder/suchitra/MyST_material/dataprep/nnet
-
-The egs files for the models(xvector_nnet_1a, xvector_nnet_1b, xvector_nnet_1c, xvector_nnet_1d, represented as modelname in the following path) can be found in HPC at /scratch/suchitrk/dataprep/exp/nnet_dir/modelname/egs 
+The 4 model files can be found at /X/MyST_material/dataprep/nnet
 
 ## Kaldi Directory after PV
 
@@ -47,16 +45,16 @@ When the variable PV is set to 0 in pv_prepareMyST.sh it functions exactly like 
 
 MyST data directory is same as above.
 
-The kaldi directory is at /home/coder/suchitra/MyST_material/pvDir . MFCC and VAD directories are subdirectories within this directory
+The kaldi directory is at /X/MyST_material/pvDir . MFCC and VAD directories are subdirectories within this directory
 
 The data directory within the pvDir has the clean and augmented (music, babble, noise and reverbation ) child data, along with a combination of the two.
 
-The combined directory for adult data can be found in /home/coder/suchitra/MyST_material/dataprep/data/train_combined_adult
+The combined directory for adult data can be found in /X/MyST_material/dataprep/data/train_combined_adult
 
 
 ## run.sh
 
-Stages 2-10 are almost the same as in kaldi/egs/voxceleb/v2/run.sh with certain changes to get different models for comparing performances. 
+Stages 2-10 are almost the same as in /kaldi/egs/voxceleb/v2/run.sh with certain changes to get different models for comparing performances. 
 
 The model hyper parameters changed during training are in local/nnet3/xvector/run_xvector.sh. 4 models have been trained.
 
