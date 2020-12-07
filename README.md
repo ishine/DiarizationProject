@@ -19,7 +19,7 @@ Each recording has been treated as an utterance. A subset of 3 times the origina
 The adult data added was chosen using select.py to closely resemble the child data in terms of number of speakers and utterances. The values in select.py have to be varied to get desired numbers.
 
 ## Modified Dataset using Pitch Variation
-Pitch variation has been introduced using sox to increase the number of child speakers to match the original number of adult speakers, 7323. Minimum and maximum cent values taken are -182 and +174, introducing pitch variations between 0.9 to 1.1 times the original pitch frequency. To introduce pitch variations between 0.8 to 1.2 times the original values, use -386 and +316 as the extremities.  
+Pitch variation was introduced to increase the number of child speakers to match the original number of adult speakers, 7323. Minimum and maximum cent values taken are -182 and +174, introducing pitch variations between 0.9 to 1.1 times the original pitch frequency. To introduce pitch variations between 0.8 to 1.2 times the original values, use -386 and +316 as the extremities.  
 
 When the variable PV is set to 1 in the script pv_prepareMyST.sh, pitch variations will be introduced. For experimental purposes, the process is done 5 times, increasing the number of child speakers from 1372 to 8232. The number of times the process is repeated can be varied. The total number of child speakers and utterances are 8232 and 2880612, brought down to 7324 speakers and 2549773 respectively, to maintain a balance between child and adult data.
 
