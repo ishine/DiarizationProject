@@ -6,7 +6,7 @@ The files recall.py, filter.py, select.py and split_map.sh are completely writte
 
 The file pv_prepareMyST.sh is a file that very closely follows the file https://github.com/kaldi-asr/kaldi/blob/master/egs/voxceleb/v2/run.sh but has been modified by me for creating the directories (with and without pitch variations). My contributions have been represented in the code.
 
-The files diarize_kaldi.sh and baseline_xvectors.sh were contributions made by the student I collaborated with.
+The evaluation file diarize_kaldi.sh was a contribution made by the PhD student I collaborated with.
 
 ## Dataset 
 
