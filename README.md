@@ -1,4 +1,4 @@
-## Information for ISI
+## Information regarding modifications made to the original repository
 
 This repository is a copy of the repository (under SAIL-USC) that was made for the SLT 2021 paper submission. 'X' in the path names, both in the README and in the code, is a place holder for the actual path names in order to maintain the privacy of the organization.
 
