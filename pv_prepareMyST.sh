@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd /home/coder/suchitra/MyST_material
+## Beginning of code modifications
+
+cd /X/MyST_material
 
 
 mkdir pvDir
@@ -13,10 +15,10 @@ upper_limit=( $cent_high - $cent_low + 1 )
 
 stage=0
 
-dataDir=/home/coder/suchitra/MyST_material/myst/myst-v0.3.0-171fbda/corpora/myst/data
-newDir=/home/coder/suchitra/MyST_material/pvDir
-kaldiDir=/home/coder/kaldi/egs/voxceleb/v2/
-musan_root=/home/coder/Datasets/musan
+dataDir=/X/MyST_material/myst/myst-v0.3.0-171fbda/corpora/myst/data
+newDir=/X/MyST_material/pvDir
+kaldiDir=/X/egs/voxceleb/v2/
+musan_root=/X/Datasets/musan
 
 if [ $stage -le 1 ]; then
 cd $dataDir
@@ -113,6 +115,9 @@ sid/compute_vad_decision.sh --nj 6 --cmd "$train_cmd" data/train exp/make_vad/da
 utils/fix_data_dir.sh $newDir/data/train
 
 fi
+
+## End of code modifications
+
 #stage 2-10 of run.sh with minor modifications to maintain compatability of recording id
 
 if [ $stage -le 2 ]; then
