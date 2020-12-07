@@ -14,7 +14,7 @@ window=1.5
 window_period=0.75
 min_segment=0.5
 nnetDir=/X/MyST_material/dataprep/nnet/model_d
-#nnetDir=/home/coder/suchitra/0007_voxceleb_v2_1a/exp/xvector_nnet_1a
+#nnetDir=/X/0007_voxceleb_v2_1a/exp/xvector_nnet_1a
 transformDir=$nnetDir/xvectors_train/
 
 # Evaluation parameters
