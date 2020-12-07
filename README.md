@@ -150,7 +150,7 @@ The relative improvement in the DER is 36% and 31.14% for the male and female su
 
 ## DER in the absence of Ground Truth
 
-Instead of using the RTTM files, in this experiment a pre-trained model was used to create the voice activity regions. The DER results are expected to be higher than that of the ones where the ground truth RTTM files were used. The resuls are presented below:
+Instead of using the RTTM files, in this experiment a pre-trained model was used to create the voice activity regions. The DER results are expected to be higher than that of the ones where the ground truth RTTM files were used. The results are presented below:
 
 Model | DIHARD PLDA| DIHARD SC | CARE PLDA | CARE SC | ADOSMod3 PLDA | ADOSMod3 SC |
 ------|------|------|------|------|-------|-------|
