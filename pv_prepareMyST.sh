@@ -5,7 +5,7 @@
 cd /X/MyST_material
 
 
-mkdir pvDir
+mkdir TrainDir
 
 #Introducing Pitch Variations between 0.9 to 1.1 times the orginal frequency
 PV=1  #carries out normal data preparation if PV=0
