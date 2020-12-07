@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 dict_map = {}
 
-dict_map_path = '/home/coder/suchitra/adosMod3/adosMod3_rttm/system/'
+dict_map_path = '/X/adosMod3/adosMod3_rttm/system/'
 
 for filename in glob.glob(os.path.join(dict_map_path,"*.txt")):
         with open(filename,'r') as f:
@@ -24,8 +24,8 @@ for filename in glob.glob(os.path.join(dict_map_path,"*.txt")):
    	                if 'mapped' in line:
                                 dict_map[line[3]+"_"+line[0]] = line[2]
 
-reference_path = '/home/coder/suchitra/adosMod3/adosMod3_rttm/reference/'
-system_path = '/home/coder/suchitra/adosMod3/adosMod3_rttm/system/'
+reference_path = '/X/adosMod3/adosMod3_rttm/reference/'
+system_path = '/X/adosMod3/adosMod3_rttm/system/'
 
 dict_reftime = {}
 dict_systime = {}
