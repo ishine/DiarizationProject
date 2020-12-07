@@ -8,6 +8,8 @@ The file pv_prepareMyST.sh is a file that very closely follows the file https://
 
 The evaluation file diarize_kaldi.sh was a contribution made by the PhD student I collaborated with.
 
+# PROJECT DETAILS
+
 ## Dataset 
 
 The MyST dataset consists of 1372 child speakers, conversing with a virtual tutor, summming up to a total of 240051 recordings(.wav) among all the children. 
