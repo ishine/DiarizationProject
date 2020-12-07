@@ -40,8 +40,6 @@ The MyST data directory is at /X/MyST_material/myst
 
 mfcc and vad feature directoreis are /X/MyST_material/dataprep/mfcc and /X/MyST_material/dataprep/vad respectively
 
-The 6 Model files can be found at /X/MyST_material/dataprep/nnet
-
 
 ## run.sh
 
