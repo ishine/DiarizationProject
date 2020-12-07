@@ -12,7 +12,7 @@ mapfile -t my_array < new
 
 for x in "${my_array[@]}"; do
 awk -v name=$x '{if ($2 == name) print $0}' rttm_modelnewb4PLDA > $x.rttm
-perl /home/coder/suchitra/CARE/dscore/scorelib/md-eval-22.pl -1 -c 0.25 -M `pwd`/map_$x.txt -r /home/coder/suchitra/CARE/rttm/reference/$x.rttm -s /home/coder/suchitra/CARE/rttm/system/$x.rttm
+perl /X/CARE/dscore/scorelib/md-eval-22.pl -1 -c 0.25 -M `pwd`/map_$x.txt -r /home/coder/suchitra/CARE/rttm/reference/$x.rttm -s /home/coder/suchitra/CARE/rttm/system/$x.rttm
 done
 
-python /home/coder/suchitra/CARE/recall.py > /home/coder/suchitra/CARE/test5
+python /X/CARE/recall.py > /X/CARE/test5
