@@ -158,7 +158,6 @@ cd ..
 
 fi
 
-# Beginning of my code contributions
 
 # Evaluation
 
@@ -172,7 +171,7 @@ oracleResults=`python score.py $collarCmd -u /X/DIHARD/all.uem -R <(ls $rttmDir/
 python score.py $collarCmd -u /X/DIHARD/all.uem -R <(ls $rttmDir/*) \
   -S <(ls $expDir/$method/clustering_oracleNumSpkr/rttm) > $currDir/temp
 
-
+# Beginning of my code contributions
 
 meanDER=`awk -F ' ' '{sum+=$2;} END{print sum/(NR-3)}' $currDir/temp`
 stdDER=`awk -v var=$meanDER '{ssq+=($2 - var)^2} END { print sqrt(ssq / (NR-3)); }' $currDir/temp`
