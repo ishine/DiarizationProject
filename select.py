@@ -3,7 +3,7 @@
 dict_adult = {}
 list_key=[]
 
-with open('/home/suchitra/Desktop/dataprep/data/train_adult_combined/spk2numutt', 'r') as f:
+with open('/X/dataprep/data/train_adult_combined/spk2numutt', 'r') as f:
 	for line in f:
     		data=line.split()
     		dict_adult[data[0]]=int(data[1])
@@ -22,7 +22,7 @@ print(a)
 b = sum(adult_subset.values())
 print(b)
    
-with open('/home/suchitra/Desktop/dataprep/data/train_adult_combined/adult_subset','w') as f:
+with open('/X/dataprep/data/train_adult_combined/adult_subset','w') as f:
 	 for x in list_key:
 		f.write("{0}\n".format(x))
 
