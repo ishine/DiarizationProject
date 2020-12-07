@@ -1,7 +1,7 @@
 #!/bin/bash/env python
 
 #To get the individual system rttm files for each speaker from the overall file  that was created during evaluation, run split_map.sh : bash split_map.sh 
-#This will give 27 individual rttm and map files.
+#This will give individual rttm and map files.
 
 import os
 import sys
