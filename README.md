@@ -1,12 +1,12 @@
 ## Information for ISI
 
-This repo is a copy of the repo that was made for the SLT paper submission with 'X' in the path names, both in the README and in the code, being used as place holders for the actual path names to maintain the privacy of the project
+This repo is a copy of the repo that was made for the SLT paper submission with 'X' in the path names, both in the README and in the code, are used as place holders for the actual path names to maintain the privacy of the project
 
-The files recall.py, filter.py, select.py and split_map.sh are completely written by me. 
+The scripts recall.py, filter.py, select.py and split_map.sh are my contributions to the Porject of which recall.py is particularly important as it validated the success of our experimentation. 
 
 The file pv_prepareMyST.sh is a file that very closely follows the file https://github.com/kaldi-asr/kaldi/blob/master/egs/voxceleb/v2/run.sh but has been modified by me for creating the directories (with and without pitch variations). My contributions have been represented in the code.
 
-The evaluation file diarize_kaldi.sh was a contribution made by the PhD student I collaborated with.
+The evaluation script diarize_kaldi.sh was written by the PhD student I collaborated with. My contributions to this script are minor and have been represented in the code.
 
 # PROJECT DETAILS
 
