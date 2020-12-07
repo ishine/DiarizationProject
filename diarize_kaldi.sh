@@ -183,5 +183,6 @@ echo "Mean DER with Oracle #Spkrs: `echo $oracleResults | cut -f 1 -d ' '`"
 echo "STD DER with Oracle #Spkrs: `echo $stdDER`"
 
 
-# End of my code contributions
 rm $wavList
+
+# End of my code contributions
