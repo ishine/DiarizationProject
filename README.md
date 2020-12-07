@@ -1,6 +1,6 @@
 ## Information for ISI
 
-This repo is a copy of the repo that was made for the SLT paper submission with 'X' in the path names, both in the README and in the code, are used as place holders for the actual path names to maintain the privacy of the project
+This repository is a copy of the repository (under SAIL-USC) that was made for the SLT paper submission. 'X' in the path names, both in the README and in the code, is a place holder for the actual path names in order to maintain the privacy of the project
 
 The scripts recall.py, filter.py, select.py and split_map.sh are my contributions to the Porject of which recall.py is particularly important as it validated the success of our experimentation. 
 
