@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Beginning of my code modifications
+## Beginning of my code contributions
 
 cd /X/MyST_material
 
@@ -116,7 +116,7 @@ utils/fix_data_dir.sh $newDir/data/train
 
 fi
 
-## End of my code modifications
+## End of my code contributions
 
 #stage 2-10 of run.sh with minor modifications to maintain compatability of recording id
 
